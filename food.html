@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food & Dining | Maheen Imperial Haven</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ===============================
+           FOOD PAGE
+        =============================== */
+
+        .food-page {
+            min-height: 100vh;
+            padding: 170px 6% 90px;
+
+            background:
+                linear-gradient(
+                    rgba(45, 0, 12, 0.88),
+                    rgba(45, 0, 12, 0.94)
+                ),
+                url("images/hotel.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .food-heading {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .food-heading > p:first-child {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 5px;
+            color: #d8ad5b;
+            margin-bottom: 15px;
+        }
+
+        .food-heading h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(48px, 7vw, 80px);
+            font-weight: normal;
+            color: white;
+        }
+
+        .food-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px auto;
+        }
+
+        .food-line span {
+            width: 100px;
+            height: 1px;
+            background: #d8ad5b;
+        }
+
+        .food-line b {
+            color: #d8ad5b;
+        }
+
+        .food-intro {
+            max-width: 750px;
+            margin: auto;
+
+            color: #eeeeee;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* FOOD GRID */
+
+        .food-grid {
+            max-width: 1200px;
+            margin: 55px auto 0;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+
+        /* FOOD CARD */
+
+        .food-card {
+            overflow: hidden;
+
+            background: rgba(15, 0, 5, 0.82);
+
+            border: 1px solid rgba(216, 173, 91, 0.5);
+
+            transition: 0.35s ease;
+        }
+
+        .food-card:hover {
+            transform: translateY(-8px);
+
+            border-color: #d8ad5b;
+
+            box-shadow:
+                0 18px 40px rgba(0, 0, 0, 0.4);
+        }
+
+
+        /* FOOD IMAGE */
+
+        .food-card img {
+            width: 100%;
+            height: 250px;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: 0.5s ease;
+        }
+
+        .food-card:hover img {
+            transform: scale(1.05);
+        }
+
+
+        /* FOOD INFORMATION */
+
+        .food-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .food-info h2 {
+            color: #d8ad5b;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 25px;
+            font-weight: normal;
+
+            margin-bottom: 10px;
+        }
+
+        .food-info p {
+            color: #eeeeee;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+        }
+
+
+        /* PRICE */
+
+        .food-price {
+            margin-top: 15px;
+
+            color: #d8ad5b;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* BOTTOM */
+
+        .food-bottom {
+            text-align: center;
+            margin-top: 55px;
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 1000px) {
+
+            .food-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .food-page {
+                padding: 180px 20px 60px;
+            }
+
+            .food-heading h1 {
+                font-size: 48px;
+            }
+
+            .food-intro {
+                font-size: 15px;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .food-card img {
+                height: 250px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <div class="crown">♕</div>
+
+        <div class="logo-name">
+            Maheen
+        </div>
+
+        <div class="logo-subtitle">
+            IMPERIAL HAVEN
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="rooms.html">
+            ROOMS
+        </a>
+
+        <a href="about.html">
+            ABOUT
+        </a>
+
+        <a href="gallery.html">
+            GALLERY
+        </a>
+
+        <a href="contact.html">
+            CONTACT
+        </a>
+
+        <a href="food.html" class="active">
+            FOOD
+        </a>
+
+        <a href="booking.html" class="book-btn">
+            BOOK NOW
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ==================================================
+     FOOD PAGE
+================================================== -->
+
+<section class="food-page">
+
+
+    <!-- HEADING -->
+
+    <div class="food-heading">
+
+        <p>
+            TASTE THE EXPERIENCE
+        </p>
+
+        <h1>
+            Food & Dining
+        </h1>
+
+
+        <div class="food-line">
+
+            <span></span>
+
+            <b>◆</b>
+
+            <span></span>
+
+        </div>
+
+
+        <p class="food-intro">
+
+            Enjoy delicious cuisine, elegant dining and
+            unforgettable flavours at Maheen Imperial Haven.
+
+        </p>
+
+    </div>
+
+
+    <!-- ==================================================
+         FOOD GRID
+    ================================================== -->
+
+    <div class="food-grid">
+
+
+        <!-- FOOD 1 -->
+
+        <div class="food-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80"
+                alt="Indian Cuisine"
+            >
+
+            <div class="food-info">
+
+                <h2>
+                    Indian Cuisine
+                </h2>
+
+                <p>
+                    Traditional Indian flavours prepared
+                    with fresh ingredients and aromatic spices.
+                </p>
+
+                <div class="food-price">
+                    FROM ₹399
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 2 -->
+
+        <div class="food-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1000&q=80"
+                alt="Italian Cuisine"
+            >
+
+            <div class="food-info">
+
+                <h2>
+                    Italian Special
+                </h2>
+
+                <p>
+                    Delicious pasta and Italian favourites
+                    prepared with authentic flavours.
+                </p>
+
+                <div class="food-price">
+                    FROM ₹499
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 3 -->
+
+        <div class="food-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80"
+                alt="Healthy Salad"
+            >
+
+            <div class="food-info">
+
+                <h2>
+                    Fresh Salads
+                </h2>
+
+                <p>
+                    Fresh vegetables and healthy ingredients
+                    prepared for a light and refreshing meal.
+                </p>
+
+                <div class="food-price">
+                    FROM ₹299
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 4 -->
+
+        <div class="food-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1000&q=80"
+                alt="Pasta"
+            >
+
+            <div class="food-info">
+
+                <h2>
+                    Chef's Pasta
+                </h2>
+
+                <p>
+                    Creamy and flavourful pasta prepared
+                    by our talented chefs.
+                </p>
+
+                <div class="food-price">
+                    FROM ₹449
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 5 -->
+
+        <div class="food-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1000&q=80"
+                alt="Dessert"
+            >
+
+            <div class="food-info">
+
+                <h2>
+                    Signature Desserts
+                </h2>
+
+                <p>
+                    Sweet and delicious desserts perfect
+                    for ending your meal.
+                </p>
+
+                <div class="food-price">
+                    FROM ₹249
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 6 -->
+
+        <div class="food-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1000&q=80"
+                alt="Refreshing Drinks"
+            >
+
+            <div class="food-info">
+
+                <h2>
+                    Drinks & Beverages
+                </h2>
+
+                <p>
+                    Refreshing beverages, juices and
+                    signature drinks for every occasion.
+                </p>
+
+                <div class="food-price">
+                    FROM ₹199
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- BOTTOM BUTTON -->
+
+    <div class="food-bottom">
+
+        <a
+            href="booking.html"
+            class="explore-btn"
+        >
+            BOOK YOUR TABLE
+        </a>
+
+    </div>
+
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        MAHEEN
+
+        <span>
+            IMPERIAL HAVEN
+        </span>
+
+    </div>
+
+    <p>
+        Luxury • Comfort • Hospitality
+    </p>
+
+    <p class="copyright">
+        © 2026 Maheen Imperial Haven.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

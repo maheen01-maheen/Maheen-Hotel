@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Now | Maheen Imperial Haven</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ===============================
+           BOOKING PAGE
+        =============================== */
+
+        .booking-page {
+            min-height: 100vh;
+            padding: 170px 6% 90px;
+
+            background:
+                linear-gradient(
+                    rgba(45, 0, 12, 0.88),
+                    rgba(45, 0, 12, 0.94)
+                ),
+                url("images/hotel.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        /* ===============================
+           HEADING
+        =============================== */
+
+        .booking-heading {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .booking-heading > p:first-child {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 5px;
+            color: #d8ad5b;
+            margin-bottom: 15px;
+        }
+
+        .booking-heading h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(48px, 7vw, 80px);
+            font-weight: normal;
+            color: white;
+        }
+
+        .booking-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px auto;
+        }
+
+        .booking-line span {
+            width: 100px;
+            height: 1px;
+            background: #d8ad5b;
+        }
+
+        .booking-line b {
+            color: #d8ad5b;
+        }
+
+        .booking-intro {
+            max-width: 750px;
+            margin: auto;
+
+            color: #eeeeee;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ===============================
+           BOOKING IMAGE
+        =============================== */
+
+        .booking-photo {
+            max-width: 900px;
+            height: 400px;
+
+            margin: 45px auto 35px;
+
+            overflow: hidden;
+
+            border: 1px solid rgba(216, 173, 91, 0.6);
+        }
+
+        .booking-photo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* ===============================
+           BOOKING FORM
+        =============================== */
+
+        .booking-form {
+            max-width: 950px;
+            margin: auto;
+
+            padding: 40px;
+
+            background: rgba(15, 0, 5, 0.82);
+
+            border: 1px solid rgba(216, 173, 91, 0.5);
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .booking-form h2 {
+            grid-column: span 2;
+
+            text-align: center;
+
+            color: #d8ad5b;
+
+            font-size: 30px;
+            font-weight: normal;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* INPUTS */
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid rgba(216, 173, 91, 0.5);
+
+            background: white;
+
+            color: #222;
+
+            font-family: Georgia, serif;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+
+        .booking-form input,
+        .booking-form select {
+            height: 52px;
+        }
+
+
+        .booking-form textarea {
+            grid-column: span 2;
+
+            height: 80px;
+
+            resize: none;
+        }
+
+
+        .booking-form input:focus,
+        .booking-form select:focus,
+        .booking-form textarea:focus {
+            border-color: #d8ad5b;
+        }
+
+
+        /* LABEL */
+
+        .booking-label {
+            color: #d8ad5b;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: -10px;
+        }
+
+
+        /* BUTTON */
+
+        .booking-form button {
+            grid-column: span 2;
+
+            height: 55px;
+
+            border: 1px solid #d8ad5b;
+
+            background: #d8ad5b;
+
+            color: #111;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .booking-form button:hover {
+            background: transparent;
+
+            color: #d8ad5b;
+        }
+
+
+        /* ===============================
+           MOBILE
+        =============================== */
+
+        @media (max-width: 700px) {
+
+            .booking-page {
+                padding: 180px 20px 60px;
+            }
+
+            .booking-heading h1 {
+                font-size: 48px;
+            }
+
+            .booking-intro {
+                font-size: 15px;
+            }
+
+            .booking-photo {
+                height: 300px;
+            }
+
+            .booking-form {
+                padding: 25px 20px;
+
+                grid-template-columns: 1fr;
+            }
+
+            .booking-form h2,
+            .booking-form textarea,
+            .booking-form button {
+                grid-column: span 1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <div class="crown">♕</div>
+
+        <div class="logo-name">
+            Maheen
+        </div>
+
+        <div class="logo-subtitle">
+            IMPERIAL HAVEN
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="rooms.html">
+            ROOMS
+        </a>
+
+        <a href="about.html">
+            ABOUT
+        </a>
+
+        <a href="gallery.html">
+            GALLERY
+        </a>
+
+        <a href="contact.html">
+            CONTACT
+        </a>
+
+        <a href="food.html">
+            FOOD
+        </a>
+
+        <a href="booking.html" class="book-btn active">
+            BOOK NOW
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ==================================================
+     BOOKING PAGE
+================================================== -->
+
+<section class="booking-page">
+
+
+    <!-- HEADING -->
+
+    <div class="booking-heading">
+
+        <p>
+            RESERVE YOUR STAY
+        </p>
+
+        <h1>
+            Book Now
+        </h1>
+
+
+        <div class="booking-line">
+
+            <span></span>
+
+            <b>◆</b>
+
+            <span></span>
+
+        </div>
+
+
+        <p class="booking-intro">
+
+            Complete the form below to request your stay
+            at Maheen Imperial Haven.
+
+        </p>
+
+    </div>
+
+
+    <!-- ==================================================
+         HOTEL PHOTO
+    ================================================== -->
+
+    <div class="booking-photo">
+
+        <img
+            src="images/hotel.jpg"
+            alt="Maheen Imperial Haven"
+        >
+
+    </div>
+
+
+    <!-- ==================================================
+         BOOKING FORM
+    ================================================== -->
+
+    <form class="booking-form">
+
+        <h2>
+            Reservation Details
+        </h2>
+
+
+        <label class="booking-label">
+            FULL NAME
+        </label>
+
+        <label class="booking-label">
+            EMAIL ADDRESS
+        </label>
+
+
+        <input
+            type="text"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required
+        >
+
+
+        <label class="booking-label">
+            CHECK-IN
+        </label>
+
+        <label class="booking-label">
+            CHECK-OUT
+        </label>
+
+
+        <input
+            type="date"
+            required
+        >
+
+        <input
+            type="date"
+            required
+        >
+
+
+        <label class="booking-label">
+            ROOM TYPE
+        </label>
+
+        <label class="booking-label">
+            NUMBER OF GUESTS
+        </label>
+
+
+        <select required>
+
+            <option value="">
+                Select a room
+            </option>
+
+            <option>
+                Luxury King Room
+            </option>
+
+            <option>
+                Deluxe Room
+            </option>
+
+            <option>
+                Premium Room
+            </option>
+
+            <option>
+                Royal Suite
+            </option>
+
+            <option>
+                Executive Room
+            </option>
+
+            <option>
+                Honeymoon Suite
+            </option>
+
+        </select>
+
+
+        <select required>
+
+            <option value="">
+                Select guests
+            </option>
+
+            <option>
+                1 Guest
+            </option>
+
+            <option>
+                2 Guests
+            </option>
+
+            <option>
+                3 Guests
+            </option>
+
+            <option>
+                4 Guests
+            </option>
+
+            <option>
+                5+ Guests
+            </option>
+
+        </select>
+
+
+        <label class="booking-label">
+            SPECIAL REQUEST
+        </label>
+
+        <span></span>
+
+
+        <textarea
+            placeholder="Any special requests..."
+        ></textarea>
+
+
+        <button type="submit">
+            CONFIRM BOOKING
+        </button>
+
+    </form>
+
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        MAHEEN
+
+        <span>
+            IMPERIAL HAVEN
+        </span>
+
+    </div>
+
+    <p>
+        Luxury • Comfort • Hospitality
+    </p>
+
+    <p class="copyright">
+        © 2026 Maheen Imperial Haven.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

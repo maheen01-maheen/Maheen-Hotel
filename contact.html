@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Maheen Imperial Haven</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ===============================
+           CONTACT PAGE
+        =============================== */
+
+        .contact-page {
+            min-height: 100vh;
+            padding: 170px 6% 90px;
+
+            background:
+                linear-gradient(
+                    rgba(45, 0, 12, 0.88),
+                    rgba(45, 0, 12, 0.94)
+                ),
+                url("images/hotel.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .contact-heading {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-heading > p:first-child {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 5px;
+            color: #d8ad5b;
+            margin-bottom: 15px;
+        }
+
+        .contact-heading h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(48px, 7vw, 80px);
+            font-weight: normal;
+            color: white;
+        }
+
+        .contact-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px auto;
+        }
+
+        .contact-line span {
+            width: 100px;
+            height: 1px;
+            background: #d8ad5b;
+        }
+
+        .contact-line b {
+            color: #d8ad5b;
+        }
+
+        .contact-intro {
+            max-width: 750px;
+            margin: auto;
+
+            color: #eeeeee;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ===============================
+           CONTACT DETAILS
+        =============================== */
+
+        .contact-details {
+            max-width: 1100px;
+            margin: 50px auto 35px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .contact-box {
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: rgba(15, 0, 5, 0.75);
+
+            border: 1px solid rgba(216, 173, 91, 0.5);
+
+            transition: 0.3s ease;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-6px);
+            border-color: #d8ad5b;
+        }
+
+        .contact-icon {
+            font-size: 30px;
+            color: #d8ad5b;
+            margin-bottom: 12px;
+        }
+
+        .contact-box h2 {
+            color: #d8ad5b;
+
+            font-size: 22px;
+            font-weight: normal;
+
+            margin-bottom: 10px;
+        }
+
+        .contact-box p {
+            color: #eeeeee;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+
+        /* ===============================
+           CONTACT CONTENT
+        =============================== */
+
+        .contact-main {
+            max-width: 1100px;
+            margin: 35px auto 0;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+
+            align-items: start;
+        }
+
+
+        /* ===============================
+           CONTACT PHOTO
+        =============================== */
+
+        .contact-photo {
+            overflow: hidden;
+
+            border: 1px solid rgba(216, 173, 91, 0.6);
+
+            background: #180006;
+        }
+
+        .contact-photo img {
+            width: 100%;
+            height: 500px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* ===============================
+           FORM
+        =============================== */
+
+        .contact-form {
+            padding: 30px;
+
+            background: rgba(15, 0, 5, 0.78);
+
+            border: 1px solid rgba(216, 173, 91, 0.5);
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+        .contact-form h2 {
+            color: #d8ad5b;
+
+            font-size: 28px;
+            font-weight: normal;
+
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid rgba(216, 173, 91, 0.5);
+
+            background: rgba(255, 255, 255, 0.95);
+
+            color: #222;
+
+            font-family: Georgia, serif;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        .contact-form input {
+            height: 50px;
+        }
+
+        /* SMALL MESSAGE BOX */
+
+        .contact-form textarea {
+            height: 55px;
+
+            min-height: 55px;
+
+            resize: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #d8ad5b;
+        }
+
+        .contact-form button {
+            height: 50px;
+
+            padding: 0 25px;
+
+            border: 1px solid #d8ad5b;
+
+            background: transparent;
+
+            color: #d8ad5b;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #d8ad5b;
+            color: #111;
+        }
+
+
+        /* ===============================
+           MOBILE
+        =============================== */
+
+        @media (max-width: 900px) {
+
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-main {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-photo img {
+                height: 450px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .contact-page {
+                padding: 180px 20px 60px;
+            }
+
+            .contact-heading h1 {
+                font-size: 48px;
+            }
+
+            .contact-intro {
+                font-size: 15px;
+            }
+
+            .contact-photo img {
+                height: 350px;
+            }
+
+            .contact-form {
+                padding: 22px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <div class="crown">♕</div>
+
+        <div class="logo-name">
+            Maheen
+        </div>
+
+        <div class="logo-subtitle">
+            IMPERIAL HAVEN
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="rooms.html">
+            ROOMS
+        </a>
+
+        <a href="about.html">
+            ABOUT
+        </a>
+
+        <a href="gallery.html">
+            GALLERY
+        </a>
+
+        <a href="contact.html" class="active">
+            CONTACT
+        </a>
+
+        <a href="food.html">
+            FOOD
+        </a>
+
+        <a href="booking.html" class="book-btn">
+            BOOK NOW
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ==================================================
+     CONTACT PAGE
+================================================== -->
+
+<section class="contact-page">
+
+
+    <!-- HEADING -->
+
+    <div class="contact-heading">
+
+        <p>
+            WE WOULD LOVE TO HEAR FROM YOU
+        </p>
+
+        <h1>
+            Contact Us
+        </h1>
+
+
+        <div class="contact-line">
+
+            <span></span>
+
+            <b>◆</b>
+
+            <span></span>
+
+        </div>
+
+
+        <p class="contact-intro">
+
+            Have a question, need assistance or want to know more
+            about Maheen Imperial Haven? Get in touch with us.
+
+        </p>
+
+    </div>
+
+
+    <!-- ==================================================
+         CONTACT DETAILS
+    ================================================== -->
+
+    <div class="contact-details">
+
+
+        <div class="contact-box">
+
+            <div class="contact-icon">
+                ☎
+            </div>
+
+            <h2>
+                Phone
+            </h2>
+
+            <p>
+                +91 98765 43210
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <div class="contact-icon">
+                ✉
+            </div>
+
+            <h2>
+                Email
+            </h2>
+
+            <p>
+                info@maheenimperialhaven.com
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <div class="contact-icon">
+                ⌖
+            </div>
+
+            <h2>
+                Location
+            </h2>
+
+            <p>
+                Kurnool, Andhra Pradesh, India
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         PHOTO + FORM
+    ================================================== -->
+
+    <div class="contact-main">
+
+
+        <!-- PHOTO -->
+
+        <div class="contact-photo">
+
+            <img
+                src="images/hotel management.png"
+                alt="Maheen Imperial Haven Hotel Management"
+            >
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form class="contact-form">
+
+            <h2>
+                Send Us a Message
+            </h2>
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Subject"
+                required
+            >
+
+            <textarea
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                SEND MESSAGE
+            </button>
+
+        </form>
+
+    </div>
+
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        MAHEEN
+
+        <span>
+            IMPERIAL HAVEN
+        </span>
+
+    </div>
+
+    <p>
+        Luxury • Comfort • Hospitality
+    </p>
+
+    <p class="copyright">
+        © 2026 Maheen Imperial Haven.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
